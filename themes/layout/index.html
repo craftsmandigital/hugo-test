@@ -1,0 +1,38 @@
+
+
+
+{{ define "head" }}
+   
+<meta http-equiv="Refresh" content="0; url=https://www.w3docs.com" />
+    {{ partial "head.html" . }}
+{{ end }}
+
+
+
+
+
+
+
+
+
+{{ define "top" }}
+  {{ partial "navbar-hero.html" . }}
+{{ end }}
+
+{{ define "pre-main" }}   
+  <div class="columns">
+    <div class="column">
+{{ end }}
+
+{{ define "main" }}   
+  {{ .Render "list-base" }}
+{{ end }}
+
+{{ define "post-main" }}   
+    </div>
+      <div class="column is-narrow">
+        <!-- Taxonomy list -->
+        {{ partial "sidenav.html" . }}
+      </div>
+    </div>
+{{ end }}
